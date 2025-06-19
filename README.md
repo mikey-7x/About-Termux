@@ -1112,7 +1112,6 @@ GUI	Browser-based only	Can use Kivy, Tk (not in Termux)
 
 ---
 
-
 **💥[3]mini setups**
 
 **🦊create vertual environment in termux**
@@ -1133,6 +1132,7 @@ source venvname/bin/activate
 
 deactivate
 
+---
 
 **🦊share folder through http link**
 
@@ -1153,6 +1153,8 @@ in second device browse in browser:
 your local ip can be like 192.168.0.27
 
 Here is your content properly formatted in Markdown for direct pasting into a README.md file on GitHub:
+
+---
 
 🔐 View and Change Hidden Permissions in Linux
 
@@ -1241,13 +1243,7 @@ Ensure files have execution permission:
 chmod +x tool_name
 
 
-
 ---
-
-
-
-
-
 
 ## 🧠 Contribute
 

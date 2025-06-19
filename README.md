@@ -1,4 +1,4 @@
-# 📱🪲🐊📟🧨🔧🐠☣️☢️🎇 About Termux – Complete Guide for Beginners & Power Users
+# 📱🪲🐊📟🍁 About Termux – Complete Guide for Beginners & Power Users
 
 > This repository is a complete, beginner-friendly guide to using **Termux** on Android. Learn how to set it up, install powerful tools, and use Linux like a pro – all from your phone, with or without root access.
 
@@ -6,7 +6,7 @@
 
 ## 📚 Table of Contents
 
-1. [☢️ What is Termux?](#-what-is-termux)
+1. [🍁 What is Termux?](#-what-is-termux)
    
 3. [🔧 Initial Setup](#-initial-setup)
    
@@ -24,7 +24,7 @@
 
 ---
 
-## 📦 What is Termux?
+## 🍁 What is Termux?
 
 **Termux** is an Android terminal emulator and Linux environment app that doesn’t require rooting. You can:
 
@@ -62,8 +62,7 @@ termux-change-repo
 
 ---
 
-🛠️ Essential Tools
-application-based tools
+🍁 Essential Tools
 
 python	
 ```

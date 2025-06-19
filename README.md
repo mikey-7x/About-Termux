@@ -1,4 +1,4 @@
-# 📱🪲🐊📟🍁 About Termux – Complete Guide for Beginners & Power Users
+# 📱🪲🐊📟🍁🌿🌾 About Termux – Complete Guide for Beginners & Power Users
 
 > This repository is a complete, beginner-friendly guide to using **Termux** on Android. Learn how to set it up, install powerful tools, and use Linux like a pro – all from your phone, with or without root access.
 
@@ -12,7 +12,7 @@
    
 5. [🛠️ Essential Tools](#-essential-tools)
    
-7. [📂 Storage Access](#📂-Storage-Access)
+7. [📂 Storage Access](#-storage-access)
    
 9. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
     
@@ -62,7 +62,7 @@ termux-change-repo
 
 ---
 
-🍁 Essential Tools
+## 🛠️ Essential Tools
 
 python	
 ```
@@ -86,7 +86,7 @@ pkg install termux-api
 
 ---
 
-📂 Storage Access
+## 📂 Storage Access
 
 To access your internal/shared storage (DCIM, Downloads, etc.):
 ```
@@ -102,7 +102,7 @@ cd /storage/emulated/0/
 
 ---
 
-💻 Linux in Termux (Proot-Distro)
+## 💻 Linux in Termux (Proot-Distro)
 
 Want full Linux inside Termux? Use proot-distro.
 
@@ -117,7 +117,7 @@ Now you’re inside Ubuntu. You can install tools with apt, set up xfce, mitmpro
 
 ---
 
-🧰 Toolkits & Use Cases
+## 🧰 Toolkits & Use Cases
 
 🔎 Dirsearch (Web Directory Brute Force)
 ```
@@ -189,7 +189,7 @@ chmod +x tool_name
 
 ---
 
-🧠 Contribute
+## 🧠 Contribute
 
 Have useful commands or scripts?
 PRs and issues are welcome!

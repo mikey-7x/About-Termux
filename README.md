@@ -7,13 +7,20 @@
 ## 📚 Table of Contents
 
 1. [📦 What is Termux?](#-what-is-termux)
-2. [🔧 Initial Setup](#-initial-setup)
-3. [🛠️ Essential Tools](#-essential-tools)
-4. [📂 Storage Access](#-storage-access)
-5. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
-6. [🧰 Toolkits & Use Cases](#-toolkits-&-use-cases)
-7. [⚠️ Troubleshooting & Tips](#-troubleshooting-&-tips)
-8. [🧠 Contribute](#-contribute)
+   
+3. [🔧 Initial Setup](#-initial-setup)
+   
+5. [🛠️ Essential Tools](#-essential-tools)
+   
+7. [📂 Storage Access](#-storage-access)
+   
+9. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
+    
+11. [🧰 Toolkits & Use Cases](#-toolkits--use-cases)
+    
+13. [⚠️ Troubleshooting & Tips](#-troubleshooting--tips)
+    
+15. [🧠 Contribute](#-contribute)
 
 ---
 

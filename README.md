@@ -24,7 +24,9 @@
     
 9. [🪽 Contribute](#-contribute)
 
-10.[📜 Credits](#-credits)
+10.[📜 License](#-license)
+
+11.[📜 Credits](#-credits)
 
 ---
 
@@ -1264,6 +1266,13 @@ PRs and issues are welcome!
 🔗 Awesome-Termux List
 
 ---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
 ## 📜 Credits
 
 This repository serves as a comprehensive guide to using Termux effectively on Android devices. It curates tutorials, installation steps, usage tips, and best practices for various open-source tools.
@@ -1291,7 +1300,7 @@ Various GitHub contributors and open-source developers
 This guide exists only to simplify the process of using those tools ethically, safely, and effectively for educational purposes.
 
 
->This repository Made with 💻❤️ by @mikey-7x – Keep hacking, keep learning!
+This repository Made with 💻❤️ by **[mikey-7x](https://github.com/mikey-7x)** 🚀🔥– Keep hacking, keep learning!
 
 ---
 

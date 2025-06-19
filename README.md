@@ -16,9 +16,9 @@
    
 5. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-proot-distro)
     
-6. [🧰 Toolkits & Use Cases](#-toolkits-&-use-cases)
+6. [🧰 Toolkits & Use Cases](#-toolkits--use-cases)
     
-7. [⚠️ Troubleshooting & Tips](#-troubleshooting-&-tips)
+7. [⚠️ Troubleshooting & Tips](#-troubleshooting--tips)
     
 8. [🧠 Contribute](#-contribute)
 

@@ -1,4 +1,4 @@
-# 📱 About Termux – Complete Guide for Beginners & Power Users
+# 📱🪲🐊 About Termux – Complete Guide for Beginners & Power Users
 
 > This repository is a complete, beginner-friendly guide to using **Termux** on Android. Learn how to set it up, install powerful tools, and use Linux like a pro – all from your phone, with or without root access.
 
@@ -6,13 +6,13 @@
 
 ## 📚 Table of Contents
 
-1. [💥 What is Termux?](#-what-is-termux)
+1. [☢️ What is Termux?](#-what-is-termux)
    
-3. [🐦‍🔥🦜🪽🪽🐔🦢🦎🐲🦕🐢🦖🐉🐊🦖🦗🪲🦠🐠🦃🕷️🪰🪳🦟🦗🐜⚓🚜🛺🚒🛸🛩️🎇🎆🧨🧧📟🩲🩳👙🔱☣️☢️♿⚕️ Initial Setup](#-initial-setup)
+3. [🔧 Initial Setup](#-initial-setup)
    
 5. [🛠️ Essential Tools](#-essential-tools)
    
-7. [📂 Storage Access](#-storage-access)
+7. [📂 Storage Access](#-Storage-Access)
    
 9. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
     

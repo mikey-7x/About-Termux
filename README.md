@@ -1122,10 +1122,12 @@ pkg install python -y
 
 
 pkg install python-venv -y
-or
+(or)
 pip install virtualenv  
 
-virtualenv venvname  (or👉)  python -m venv venvname
+virtualenv venvname  
+(or)  
+python -m venv venvname
 
 source venvname/bin/activate
 
@@ -1152,7 +1154,7 @@ your local ip can be like 192.168.0.27
 
 Here is your content properly formatted in Markdown for direct pasting into a README.md file on GitHub:
 
-### 🔐 View and Change Hidden Permissions in Linux
+🔐 View and Change Hidden Permissions in Linux
 
 🧾 To See Hidden Permissions
 
@@ -1167,9 +1169,9 @@ ls -la
 drwx------
 -rwx------
 
-d → indicates a directory
+"d" → indicates a directory
 
-- → indicates a file
+"-" → indicates a file
 
 
 Permission Values:

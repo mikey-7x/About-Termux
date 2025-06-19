@@ -26,7 +26,7 @@
 
 10. [📜 License](#-license)
    
-11.[📜 Credits](#-credits)
+11. [📜 Credits](#-credits)
 
 ---
 

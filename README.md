@@ -8,19 +8,19 @@
 
 1. [🍁 What is Termux?](#-what-is-termux)
    
-3. [🔧 Initial Setup](#-initial-setup)
+2. [🔧 Initial Setup](#-initial-setup)
    
-5. [🛠️ Essential Tools](#-essential-tools)
+3. [🛠️ Essential Tools](#-essential-tools)
    
-7. [📂 Storage Access](#-storage-access)
+4. [📂 Storage Access](#-storage-access)
    
-9. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
+5. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-proot-distro)
     
-11. [🧰 Toolkits & Use Cases](#-toolkits--use-cases)
+6. [🧰 Toolkits & Use Cases](#-toolkits-&-use-cases)
     
-13. [⚠️ Troubleshooting & Tips](#-troubleshooting--tips)
+7. [⚠️ Troubleshooting & Tips](#-troubleshooting-&-tips)
     
-15. [🧠 Contribute](#-contribute)
+8. [🧠 Contribute](#-contribute)
 
 ---
 
@@ -55,7 +55,7 @@ pkg install pulseaudio -y
 pkg install curl -y
 ```
 
-4. ✅ Fix Mirrors (if slow)
+3. ✅ Fix Mirrors (if slow)
 ```
 termux-change-repo
 ```

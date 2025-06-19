@@ -606,7 +606,7 @@ And it will activate your environment and open the dirsearch folder automaticall
 
 ---
 
-## 🔗 Clone the AndroRAT Repository
+🔗 Clone the AndroRAT Repository
 
 ```bash
 git clone https://github.com/karma9874/AndroRAT.git
@@ -721,45 +721,6 @@ exit:	Exits the AndroRAT shell
 
 ---
 
-⚠️ For educational use only. Never use without consent.
-
-
----
-
-## ⚠️ Troubleshooting & Tips
-
-Issue	Fix Command
-
-Network tools not working	
-```
-pkg install net-tools
-```
-
-Package errors or 403s	
-```
-termux-change-repo
-```
-
-Storage access denied	
-```
-termux-setup-storage
-```
-and restart Termux
-
-Slow repo or package install
-Use mirrors via 
-```
-termux-change-repo
-```
-
-Permission denied errors	
-Ensure files have execution permission: 
-chmod +x tool_name
-
-
-
----
-
 ## 🪲 About Termux
 
 **💥[1]All Major Usable Scripting Languages in Termux (Android)**
@@ -773,8 +734,6 @@ Use Case
 Installation Command
 
 Pros and Cons
-
-
 
 ---
 
@@ -1249,6 +1208,40 @@ Each can be a combination of r, w, and x.
 ✅ Use this to fine-tune file and directory access for better control and security.
 
 ---
+## ⚠️ Troubleshooting & Tips
+
+Issue	Fix Command
+
+Network tools not working	
+```
+pkg install net-tools
+```
+
+Package errors or 403s	
+```
+termux-change-repo
+```
+
+Storage access denied	
+```
+termux-setup-storage
+```
+and restart Termux
+
+Slow repo or package install
+Use mirrors via 
+```
+termux-change-repo
+```
+
+Permission denied errors	
+Ensure files have execution permission: 
+chmod +x tool_name
+
+
+
+---
+
 
 
 

@@ -10,7 +10,7 @@
    
 2. [🔧 Initial Setup](#-initial-setup)
    
-3. [🛠️ Essential Tools](#-essential-tools)
+3. [🛠️ Essential packages](#-essential-packages)
    
 4. [📂 Storage Access](#-storage-access)
    
@@ -24,9 +24,9 @@
     
 9. [🪽 Contribute](#-contribute)
 
-10.[📜 License](#-license)
+ 10.[📜 License](#-license)
 
-11.[📜 Credits](#-credits)
+ 11.[📜 Credits](#-credits)
 
 ---
 
@@ -68,7 +68,7 @@ termux-change-repo
 
 ---
 
-## 🛠️ Essential Tools
+## 🛠️ Essential packages 
 
 python	
 ```

@@ -10,7 +10,7 @@
    
 2. [🔧 Initial Setup](#-initial-setup)
    
-3. [🛠️ Essential Tools](#-Essential-Tools)
+3. [🛠️ Essential Tools](#-essential-tools)
    
 4. [📂 Storage Access](#-storage-access)
    

@@ -393,7 +393,8 @@ nohup mitmproxy --mode regular --listen-port 8080 &
 
 http://<HOST_IP>:8080
 
-# Example: 
+Example: 
+
 http://192.168.1.102:8080
 
 2. Download the certificate from:
@@ -530,7 +531,7 @@ Step	Action
 
 **💥[3]Use dirsearch in Ubuntu (Proot) in the termux**
 
-### 1. 🧰 Install Python Tools
+1. 🧰 Install Python Tools
 
 ```bash
 sudo apt update

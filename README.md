@@ -42,24 +42,7 @@
 
 ➤ [https://f-droid.org/packages/com.termux/](https://f-droid.org/packages/com.termux/)
 
-2. ✅ **Update and Upgrade Packages**
-```bash
-pkg update && pkg upgrade -y
-```
-
-3. ✅ Install Basic Essentials
-```
-pkg install python git curl wget nano openssh -y
-```
-
-4. ✅ Fix Mirrors (if slow)
-```
-termux-change-repo
-```
-
----
-
-🛠️ Essential Tools
+2. ✅ **Update,Upgrade and install basic Essentials**
 ```
 termux-setup-storage
 pkg update && pkg upgrade -y
@@ -72,6 +55,14 @@ pkg install pulseaudio -y
 pkg install curl -y
 ```
 
+4. ✅ Fix Mirrors (if slow)
+```
+termux-change-repo
+```
+
+---
+
+🛠️ Essential Tools
 application-based tools
 
 python	

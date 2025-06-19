@@ -31,8 +31,9 @@
 
 ## 🔧 Initial Setup
 
-1. ✅ **Install Termux from F-Droid** *(Do NOT use Play Store version)*  
-   ➤ [https://f-droid.org/packages/com.termux/](https://f-droid.org/packages/com.termux/)
+1. ✅ **Install Termux from F-Droid** *(Do NOT use Play Store version)*
+
+➤ [https://f-droid.org/packages/com.termux/](https://f-droid.org/packages/com.termux/)
 
 2. ✅ **Update and Upgrade Packages**
 ```bash
@@ -40,15 +41,11 @@ pkg update && pkg upgrade -y
 ```
 
 3. ✅ Install Basic Essentials
-
-
 ```
 pkg install python git curl wget nano openssh -y
 ```
 
 4. ✅ Fix Mirrors (if slow)
-
-
 ```
 termux-change-repo
 ```
@@ -56,15 +53,38 @@ termux-change-repo
 ---
 
 🛠️ Essential Tools
-
-Tool	Command	Use Case
 ```
-python	pkg install python	Scripting & automation
-git	pkg install git	Clone GitHub repositories
-proot-distro	pkg install proot-distro	Install full Linux distributions
-openssh	pkg install openssh	SSH server/client
-termux-api	pkg install termux-api	Access Android functions
+termux-setup-storage
+pkg update && pkg upgrade -y
+pkg install wget -y
+pkg install git -y
+pkg install tur-repo -y
+pkg install x11-repo -y
+pkg install termux-x11-nightly -y
+pkg install pulseaudio -y
+pkg install curl -y
+```
 
+application-based tools
+
+python	
+```
+pkg install python	
+```
+
+proot-distro (Install full Linux distributions)
+```
+pkg install proot-distro	
+```
+
+openssh	(SSH server/client)
+```
+pkg install openssh	
+```
+
+termux-api (Access Android functions)
+```
+pkg install termux-api	
 ```
 
 ---
@@ -79,7 +99,6 @@ termux-setup-storage
 A popup will request permission. Tap Allow.
 
 Access shared storage via:
-
 ```
 cd /storage/emulated/0/
 ```
@@ -143,11 +162,31 @@ python3 androRAT.py --build -i <your_ip> -p 8000 -o rat.apk
 
 Issue	Fix Command
 
-Network tools not working	pkg install net-tools
-Package errors or 403s	termux-change-repo
-Storage access denied	termux-setup-storage and restart Termux
-Slow repo or package install	Use mirrors via termux-change-repo
-Permission denied errors	Ensure files have exec perms: chmod +x
+Network tools not working	
+```
+pkg install net-tools
+```
+
+Package errors or 403s	
+```
+termux-change-repo
+```
+
+Storage access denied	
+```
+termux-setup-storage
+```
+and restart Termux
+
+Slow repo or package install
+Use mirrors via 
+```
+termux-change-repo
+```
+
+Permission denied errors	
+Ensure files have execution permission: 
+chmod +x tool_name
 
 
 
@@ -173,18 +212,11 @@ PRs and issues are welcome!
 
 ---
 
-> Made with 💻 by @mikey-7x – Keep hacking, keep learning!
+> Made with 💻♥️ by @mikey-7x – Keep hacking, keep learning!
 
 
 
 ---
-
-### ✅ Features of This README:
-- Clean layout
-- Proper sectioning with emojis
-- Useful quick-copy code blocks
-- Beginner and advanced tips
-- Expandable with more tools/scripts
 
 
 

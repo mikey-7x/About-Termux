@@ -155,7 +155,7 @@ python3 androRAT.py --build -i <your_ip> -p 8000 -o rat.apk
 
 ---
 
-⚠️ Troubleshooting & Tips
+## ⚠️ Troubleshooting & Tips
 
 Issue	Fix Command
 

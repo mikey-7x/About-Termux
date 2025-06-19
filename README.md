@@ -10,9 +10,9 @@
 2. [🔧 Initial Setup](#-initial-setup)
 3. [🛠️ Essential Tools](#-essential-tools)
 4. [📂 Storage Access](#-storage-access)
-5. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-proot-distro)
-6. [🧰 Toolkits & Use Cases](#-toolkits-use-cases)
-7. [⚠️ Troubleshooting & Tips](#-troubleshooting-tips)
+5. [💻 Linux in Termux (Proot-Distro)](#-linux-in-termux-(proot-distro))
+6. [🧰 Toolkits & Use Cases](#-toolkits-&-use-cases)
+7. [⚠️ Troubleshooting & Tips](#-troubleshooting-&-tips)
 8. [🧠 Contribute](#-contribute)
 
 ---

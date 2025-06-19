@@ -6,9 +6,9 @@
 
 ## 📚 Table of Contents
 
-1. [📦 What is Termux?](#-what-is-termux)
+1. [💥 What is Termux?](#-what-is-termux)
    
-3. [🔧 Initial Setup](#-initial-setup)
+3. [🐦‍🔥🦜🪽🪽🐔🦢🦎🐲🦕🐢🦖🐉🐊🦖🦗🪲🦠🐠🦃🕷️🪰🪳🦟🦗🐜⚓🚜🛺🚒🛸🛩️🎇🎆🧨🧧📟🩲🩳👙🔱☣️☢️♿⚕️ Initial Setup](#-initial-setup)
    
 5. [🛠️ Essential Tools](#-essential-tools)
    

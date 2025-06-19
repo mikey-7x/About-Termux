@@ -125,25 +125,25 @@ Now you’re inside Ubuntu. You can install tools with apt, set up xfce, mitmpro
 
 🏁Initial Setup (after install)
 
-**For using sudo, first install it**
+For using sudo, first install it
 ```
 pacman -S sudo
 ```
 
-**Set timezone**
+Set timezone
 ```
 ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 hwclock --systohc
 ```
 
-**Generate locales**
+Generate locales
 ```
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
 
-**Set hostname**
+Set hostname
 ```
 echo myhostname > /etc/hostname
 ```
@@ -152,18 +152,18 @@ echo myhostname > /etc/hostname
 
 🧑‍💻 User Management
 
-**Add user and set password**
+Add user and set password
 ```
 useradd -m -G wheel myuser
 passwd myuser
 ```
 
-**Allow wheel group sudo access**
+Allow wheel group sudo access
 ```
 EDITOR=nano visudo
 ```
 
-**Then uncomment:**
+Then uncomment
 ```
 #%wheel ALL=(ALL:ALL) ALL
 ```
@@ -172,32 +172,32 @@ EDITOR=nano visudo
 
 📦 Pacman (Package Manager)
 
-**Update system (update & upgrade)**
+Update system (update & upgrade)
 ```
 sudo pacman -Syu
 ```
 
-**Install package**
+Install package
 ```
 sudo pacman -S packagename
 ```
 
-**Remove package**
+Remove package
 ```
 sudo pacman -R packagename
 ```
 
-**Remove package with dependencies**
+Remove package with dependencies
 ```
 sudo pacman -Rns packagename
 ```
 
-**Search for package**
+Search for package
 ```
 pacman -Ss keyword
 ```
 
-**List installed packages**
+List installed packages
 ```
 pacman -Q
 ```
@@ -206,22 +206,22 @@ pacman -Q
 
 🛠️ System Maintenance
 
-**Clean cache (except current packages)**
+Clean cache (except current packages)
 ```
 sudo pacman -Sc
 ```
 
-**Clean all cache (aggressive)**
+Clean all cache (aggressive)
 ```
 sudo pacman -Scc
 ```
 
-**List orphan packages**
+List orphan packages
 ```
 pacman -Qdt
 ```
 
-**Remove orphan packages**
+Remove orphan packages
 ```
 sudo pacman -Rns $(pacman -Qdtq)
 ```
@@ -232,14 +232,14 @@ sudo pacman -Rns $(pacman -Qdtq)
 
 Pacman doesn’t support AUR directly. Use an AUR helper like yay:
 
-**Install yay (requires git and base-devel)**
+Install yay (requires git and base-devel)
 ```
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
 
-**Use yay**
+Use yay
 
 yay -S package-name
 yay -Rns package-name
@@ -250,17 +250,17 @@ yay -Yc  # Clean orphan packages
 
 🌐 Networking
 
-**Check IP**
+Check IP
 ```
 ip a
 ```
 
-**Enable & start NetworkManager (Wi-Fi/Ethernet)**
+Enable & start NetworkManager (Wi-Fi/Ethernet)
 
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
 
-**Use terminal UI**
+Use terminal UI
 ```
 nmtui
 ```
@@ -269,17 +269,17 @@ nmtui
 
 🖥️ GUI and Display
 
-**Install Xorg**
+Install Xorg
 ```
 sudo pacman -S xorg xorg-xinit
 ```
 
-**Install desktop environment (example: XFCE)**
+Install desktop environment (example: XFCE)
 ```
 sudo pacman -S xfce4 xfce4-goodies
 ```
 
-**Enable display manager (example: LightDM)**
+Enable display manager (example: LightDM)
 
 sudo pacman -S lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm
@@ -289,15 +289,15 @@ sudo systemctl enable lightdm
 
 📁 Filesystem and Disks
 
-**Mount disk**
+Mount disk
 ```
 mount /dev/sdX1 /mnt
 ```
-**Format to ext4**
+Format to ext4
 ```
 mkfs.ext4 /dev/sdX1
 ```
-**List disks**
+List disks
 ```
 lsblk
 ```

@@ -401,7 +401,7 @@ Example:
 
 http://192.168.1.102:8080
 
-2. Download the certificate from:
+2. Download the certificate from(download certificate by pasting this link in browser):
 
 mitmproxy-ca-cert.pem
 

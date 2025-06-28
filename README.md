@@ -1230,7 +1230,7 @@ This guide explains how to create different types of **virtual environments in T
 
 ## 📁 Table of Contents
 
-- [Python Virtual Environment](#-1-python-virtual-environment)
+- [Python Virtual Environment](#-python-virtual-environment)
 - [Node.js Environment using NVM](#-2-nodejs-environment-using-nvm)
 - [Linux Environments using Proot-distro](#-3-linux-environments-using-proot-distro)
 - [Manual Root Filesystem using Proot/Chroot](#-4-manual-root-filesystem-using-prootchroot)

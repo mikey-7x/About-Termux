@@ -1381,18 +1381,17 @@ Custom proot containers
 
 ---
 
-📊 Summary Table
+## 📊 Summary Table
 
-Method	Type	Use Case
-
-virtualenv	Python environment	Python project isolation
-nvm	Node.js version manager	Manage multiple Node.js versions
-proot-distro	Linux distro sandbox	Full Debian/Ubuntu/Kali in Termux
-proot/chroot	Manual rootfs	Custom rootless Linux environments
-conda	Python/R/ML environment	Heavier, more flexible than virtualenv
-qemu	Virtual machine	Full VM isolation for any OS
-fakeroot	Experimental container	Docker-style Linux envs (unstable)
-
+| Method         | Type                   | Use Case                                |
+|----------------|------------------------|------------------------------------------|
+| virtualenv     | Python environment     | Python project isolation                 |
+| nvm            | Node.js version manager| Manage multiple Node.js versions         |
+| proot-distro   | Linux distro sandbox   | Full Debian/Ubuntu/Kali in Termux        |
+| proot/chroot   | Manual rootfs          | Custom rootless Linux environments       |
+| conda          | Python/R/ML environment| Heavier, more flexible than virtualenv   |
+| qemu           | Virtual machine        | Full VM isolation for any OS             |
+| fakeroot       | Experimental container | Docker-style Linux envs (unstable)       |
 
 
 ---

@@ -125,7 +125,7 @@ Now you’re inside Ubuntu. You can install tools with apt, set up xfce, mitmpro
 
 ## 🧰 Toolkits & Use Cases
 
-**💥[1]Use Arch Linux Through Termux**
+# **💥[1]Use Arch Linux Through Termux**
 
 🏁Initial Setup (after install)
 
@@ -308,7 +308,7 @@ lsblk
 
 ---
 
-**💥[2]mitmproxy on Android (No Root)**
+# **💥[2]mitmproxy on Android (No Root)**
 
 **📦 Manual Download (if needed)**
 
@@ -533,7 +533,7 @@ Step	Action
 
 ---
 
-**💥[3]Use dirsearch in Ubuntu (Proot) in the termux**
+# **💥[3]Use dirsearch in Ubuntu (Proot) in the termux**
 
 1. 🧰 Install Python Tools
 
@@ -602,7 +602,7 @@ And it will activate your environment and open the dirsearch folder automaticall
 
 ---
 
-**💥[4]AndroRAT**
+# **💥[4]AndroRAT**
 
 # 🐍📱 AndroRAT (Remote Access Tool for Android) — GitHub Guide
 
@@ -727,7 +727,7 @@ exit:	Exits the AndroRAT shell
 
 ## 🪲 About Termux
 
-**💥[1]All Major Usable Scripting Languages in Termux (Android)**
+# **💥[1]All Major Usable Scripting Languages in Termux (Android)**
 
 Here's a complete list of scripting languages supported in Termux, including their:
 
@@ -1001,7 +1001,7 @@ Node.js: Create a Telegram bot that responds to Termux system data
 
 ---
 
-**💥[2]💻What is PHP?**
+# **💥[2]💻What is PHP?**
 
 PHP stands for "Hypertext Preprocessor". It is a:
 
@@ -1116,7 +1116,7 @@ GUI	Browser-based only	Can use Kivy, Tk (not in Termux)
 
 ---
 
-**💥[3]mini setups**
+# **💥[3]mini setups**
 
 **🦊create vertual environment in termux**
 
@@ -1241,7 +1241,7 @@ This guide explains how to create different types of **virtual environments in T
 
 ---
 
-## ✅ 1. Python Virtual Environment
+✅ 1. Python Virtual Environment
 
 Isolate Python packages per project.
 
@@ -1309,14 +1309,14 @@ Each installed distro is its own virtual Linux environment.
 
 Use prebuilt root filesystems (like Kali Rootless).
 
-# Assuming you downloaded a rootfs
+#Assuming you downloaded a rootfs
 ```
 mkdir ~/kali-arm64
 ```
 
-# Extract Kali rootfs into it
+#Extract Kali rootfs into it
 
-# Login manually
+#Login manually
 ```
 proot -S ~/kali-arm64 /bin/bash
 ```
@@ -1334,12 +1334,12 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
 bash Miniconda3-latest-Linux-aarch64.sh
 ```
 
-# Activate
+#Activate
 ```
 source ~/miniconda3/bin/activate
 ```
 
-# Create and use environment
+#Create and use environment
 ```
 conda create -n myenv python=3.11
 conda activate myenv
@@ -1357,8 +1357,8 @@ Run full Linux distributions via virtualization.
 pkg install qemu-system-aarch64
 ```
 
-# Set up a disk image and ISO manually
-# Example: Run a full Kali or Ubuntu VM inside Termux
+#Set up a disk image and ISO manually
+#Example: Run a full Kali or Ubuntu VM inside Termux
 
 Best for advanced users needing true OS-level isolation.
 

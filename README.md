@@ -1117,7 +1117,8 @@ Feature	PHP	Python
 ---
 
 # **💥[3]mini setups**
-**🦊 create user and bring sudo permissions in your linux**
+**🦊 create own user id and bring sudo permissions in your linux**
+
 open your linux distribution and run:
 ```
 apt update
@@ -1132,7 +1133,7 @@ run:
 ```
 nano /etc/sudoers
 ```
-find 'root ALL=(ALL:ALL) ALL'and below this add:
+find 'root ALL=(ALL:ALL) ALL' and below this add:
 ```
 your_user_id ALL=(ALL:ALL) ALL
 ```

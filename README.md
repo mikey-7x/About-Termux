@@ -1139,6 +1139,11 @@ your_user_id ALL=(ALL:ALL) ALL
 ```
 press ctrl+x,y,Enter 
 
+To open your user environment run:
+```
+su your_user_id
+```
+
 **🦊create vertual environment in termux**
 
 pkg update && pkg upgrade -y

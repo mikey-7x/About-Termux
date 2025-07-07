@@ -1102,21 +1102,41 @@ Then open http://localhost:8080 in Termux-X11 browser or Android browser.
 
 Feature	PHP	Python
 
-Web interface	Excellent	Good (Flask/Django)
+- Web interface	Excellent	Good (Flask/Django)
 
-Command runner	Good with shell_exec()	Great with subprocess, os
+- Command runner	Good with shell_exec()	Great with subprocess, os
 
-Mobile-friendly	Lightweight and fast	Heavier, but more flexible
+- Mobile-friendly	Lightweight and fast	Heavier, but more flexible
 
-Learning curve	Easy for basic scripts	Easy to moderate
+- Learning curve	Easy for basic scripts	Easy to moderate
 
-GUI	Browser-based only	Can use Kivy, Tk (not in Termux)
+- GUI	Browser-based only	Can use Kivy, Tk (not in Termux)
 
 
 
 ---
 
 # **💥[3]mini setups**
+**🦊 create user and bring sudo permissions in your linux**
+open your linux distribution and run:
+```
+apt update
+apt upgrade
+apt install sudo nano adduser -y
+```
+then add your user id:
+```
+adduser your_user_id
+```
+run:
+```
+nano /etc/sudoers
+```
+find 'root ALL=(ALL:ALL) ALL'and below this add:
+```
+your_user_id ALL=(ALL:ALL) ALL
+```
+press ctrl+x,y,Enter 
 
 **🦊create vertual environment in termux**
 
@@ -1138,7 +1158,7 @@ deactivate
 
 ---
 
-**🦊share folder through http link**
+**🦊share folder over http link**
 
 same network connection is required (use same wi-fi network)
 
@@ -1160,7 +1180,7 @@ Here is your content properly formatted in Markdown for direct pasting into a RE
 
 ---
 
-🔐 View and Change Hidden Permissions in Linux
+**🔐 View and Change Hidden Permissions in Linux**
 
 🧾 To See Hidden Permissions
 
